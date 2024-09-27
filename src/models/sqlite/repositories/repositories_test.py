@@ -18,6 +18,7 @@ def test_list_pets(): # Teste de integração (o projeto com o banco)
 # Ai procuramos com o database.session a gente consegue entrar dentro do banco de dados
 # e fazer o que desejamos
 
+@pytest.mark.skip(reason='interacao com o banco')
 def test_delete_pet():
     name = "belinha"
 
@@ -25,11 +26,24 @@ def test_delete_pet():
     repo.delete_pets(name)
 
 
+@pytest.mark.skip(reason='interacao com o banco')
+def test_insert_person():
+    first_name = 'test name'
+    last_name = 'test last'
+    age = 77
+    pet_id = 2
 
-def test_list_people():
     repo = PeopleRepository(db_connection_handler)
-    response = repo.list_people()
+    repo.insert_person(first_name, last_name, age, pet_id)
+    
+@pytest.mark.skip(reason='interacao com o banco')
+def test_get_person():
+    person_id = 1 
+    repo = PeopleRepository(db_connection_handler)
+    response = repo.get_person(person_id)
+    print()
     print(response)
+    
 
     
 # Vamos fazer uma conexão fictícia com o ambiente controlado para 
