@@ -1,8 +1,9 @@
 from typing import List
 from sqlalchemy.orm.exc import NoResultFound
 from src.models.sqlite.entities.pets import PetsTable
+from src.models.sqlite.interfaces.pets_repository import PetsRepositoryInteface
 
-class PetsRepository: # Essa classe de repositório vai depender da conexão
+class PetsRepository(PetsRepositoryInteface): # Essa classe de repositório vai depender da conexão
     def __init__(self, db_connection) -> None:
         # Vamos definir a conexão desejada
         self.__db_connection = db_connection
