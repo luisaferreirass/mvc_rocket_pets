@@ -1,7 +1,7 @@
 from src.models.sqlite.interfaces.pets_repository import PetsRepositoryInteface
+from src.controllers.interfaces.pet_deleter_controller import PetDeleterControllerInterface
 
-
-class PetDeleterController:
+class PetDeleterController(PetDeleterControllerInterface):
     def __init__(self, pet_repository:PetsRepositoryInteface) -> None:
         self.__pet_repository = pet_repository
 
