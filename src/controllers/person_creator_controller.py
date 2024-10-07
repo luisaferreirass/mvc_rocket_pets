@@ -1,5 +1,6 @@
 import re # Artifício de validação para expressões regulares
 from typing import Dict
+from src.errors.errors_types.http_bad_request import HttpBadRequestError
 from src.models.sqlite.interfaces.people_repository import PeopleRepositoryInterface
 from src.controllers.interfaces.person_creator_controller import PersonCreatorControllerInterface
 
@@ -25,7 +26,7 @@ class PersonCreatorController(PersonCreatorControllerInterface):
         # Todos os carcteres menos esses que estão dentro, ou seja, o alfabeto
 
         if non_valid_caracteres.search(first_name) or non_valid_caracteres.search(last_name):
-            raise Exception("Nome da pessoa inválido!")
+            raise HttpBadRequestError("Nome da pessoa inválido!")
         
     def __insert_person_in_db(self, first_name: str, last_name: str, age: int, pet_id: int) -> None:
         self.__people_repository.insert_person(first_name, last_name, age, pet_id)
