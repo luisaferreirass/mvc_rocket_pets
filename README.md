@@ -2,7 +2,7 @@
 
 ## 📝 Sobre o projeto
 
-Sistema de gerenciamento de pets desenvolvido seguindo o padrão arquitetural **MVC (Model-View-Controller)** com **Flask**. O projeto implementa um CRUD completo para cadastro e gerenciamento de animais de estimação, demonstrando boas práticas de organização de código e separação de responsabilidades.
+API de gerenciamento de pets desenvolvida seguindo o padrão arquitetural **MVC (Model-View-Controller)** com **Flask**. O projeto implementa um CRUD completo para cadastro e gerenciamento de animais de estimação, demonstrando boas práticas de organização de código e separação de responsabilidades.
 
 Ideal para aprendizado de:
 - Arquitetura MVC
@@ -10,6 +10,7 @@ Ideal para aprendizado de:
 - Organização de projetos Python
 - Separação de camadas (Model, View, Controller)
 - Banco de dados SQLite com SQLAlchemy
+- APIs RESTful
 
 ## 🚀 Tecnologias utilizadas
 
@@ -17,8 +18,6 @@ Ideal para aprendizado de:
 - **Flask** - Framework web
 - **Flask-SQLAlchemy** - ORM para banco de dados
 - **SQLite** - Banco de dados
-- **HTML/CSS** - Interface do usuário
-- **Jinja2** - Template engine
 
 ## 🏗️ Arquitetura MVC
 
@@ -26,7 +25,7 @@ Ideal para aprendizado de:
 Representa a camada de dados, responsável pela lógica de negócio e interação com o banco de dados.
 
 ### View
-Camada de apresentação, responsável pela interface com o usuário através de templates HTML.
+Camada de apresentação, responsável por retornar respostas JSON para o cliente.
 
 ### Controller
 Gerencia a comunicação entre Model e View, processando requisições e respostas.
@@ -70,8 +69,7 @@ pip install flask flask-sqlalchemy
 python run.py
 ```
 
-A aplicação estará disponível em: `http://localhost:5000`
-
+A API estará disponível em: `http://localhost:5000`
 
 ## 🎯 Funcionalidades
 
@@ -93,15 +91,15 @@ A aplicação estará disponível em: `http://localhost:5000`
 | age | Integer | Idade do pet |
 | owner | String | Nome do proprietário |
 
-## 📸 Rotas da aplicação
+## 📸 Endpoints da API
 
-| Rota | Método | Descrição |
-|------|--------|-----------|
-| `/` | GET | Lista todos os pets |
-| `/pet/create` | GET, POST | Cadastra um novo pet |
-| `/pet/<id>` | GET | Visualiza detalhes do pet |
-| `/pet/update/<id>` | GET, POST | Atualiza informações do pet |
-| `/pet/delete/<id>` | POST | Exclui um pet |
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| GET | `/pets` | Lista todos os pets |
+| GET | `/pets/<id>` | Visualiza detalhes do pet |
+| POST | `/pets` | Cadastra um novo pet |
+| PUT | `/pets/<id>` | Atualiza informações do pet |
+| DELETE | `/pets/<id>` | Exclui um pet |
 
 ## 🎨 Padrão MVC no projeto
 ```
@@ -111,9 +109,9 @@ Requisição HTTP
       ↓
    Model (acessa/manipula dados)
       ↓
-   View (renderiza template)
+   View (retorna JSON)
       ↓
-  Resposta HTTP
+  Resposta HTTP (JSON)
 ```
 
 ## 🤝 Contribuindo
@@ -127,3 +125,8 @@ Este projeto está sob a licença MIT.
 ## 👩‍💻 Autora
 
 Desenvolvido por [Luisa Ferreira](https://github.com/luisaferreirass)
+```
+
+**About atualizado:**
+```
+API de gerenciamento de pets desenvolvida com Flask seguindo o padrão MVC. Implementa CRUD completo com arquitetura organizada em camadas (Model-View-Controller) e persistência de dados em SQLite.
