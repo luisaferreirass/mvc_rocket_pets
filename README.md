@@ -72,24 +72,6 @@ python run.py
 
 A aplicação estará disponível em: `http://localhost:5000`
 
-## 📁 Estrutura do projeto
-```
-mvc_rocket_pets/
-├── app/
-│   ├── __init__.py           # Inicialização da aplicação
-│   ├── models/
-│   │   └── pet.py           # Model de Pet
-│   ├── controllers/
-│   │   └── pet_controller.py # Controller de Pet
-│   ├── views/
-│   │   └── templates/       # Templates HTML
-│   └── static/
-│       └── css/             # Arquivos CSS
-├── instance/
-│   └── pets.db              # Banco de dados SQLite
-├── run.py                   # Arquivo principal para executar a aplicação
-└── README.md
-```
 
 ## 🎯 Funcionalidades
 
