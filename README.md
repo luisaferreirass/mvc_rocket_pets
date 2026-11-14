@@ -1,56 +1,56 @@
 # 🚀 MVC Rocket Pets
 
-## 📝 Sobre o projeto
+## 📝 About the project
 
-API de gerenciamento de pets desenvolvida seguindo o padrão arquitetural **MVC (Model-View-Controller)** com **Flask**. O projeto implementa um CRUD completo para cadastro e gerenciamento de animais de estimação, demonstrando boas práticas de organização de código e separação de responsabilidades.
+Pet management API built following the **MVC (Model-View-Controller)** architectural pattern with **Flask**. The project implements a complete CRUD for registering and managing pets, demonstrating good code organization practices and separation of concerns.
 
-Ideal para aprendizado de:
-- Arquitetura MVC
-- Framework Flask
-- Organização de projetos Python
-- Separação de camadas (Model, View, Controller)
-- Banco de dados SQLite com SQLAlchemy
-- APIs RESTful
+Great for learning:
+- MVC architecture
+- The Flask framework
+- Python project organization
+- Layer separation (Model, View, Controller)
+- SQLite database with SQLAlchemy
+- RESTful APIs
 
-## 🚀 Tecnologias utilizadas
+## 🚀 Technologies used
 
 - **Python 3.x**
-- **Flask** - Framework web
-- **Flask-SQLAlchemy** - ORM para banco de dados
-- **SQLite** - Banco de dados
+- **Flask** - Web framework
+- **Flask-SQLAlchemy** - Database ORM
+- **SQLite** - Database
 
-## 🏗️ Arquitetura MVC
+## 🏗️ MVC Architecture
 
 ### Model
-Representa a camada de dados, responsável pela lógica de negócio e interação com o banco de dados.
+Represents the data layer, responsible for business logic and database interaction.
 
 ### View
-Camada de apresentação, responsável por retornar respostas JSON para o cliente.
+Presentation layer, responsible for returning JSON responses to the client.
 
 ### Controller
-Gerencia a comunicação entre Model e View, processando requisições e respostas.
+Manages communication between Model and View, processing requests and responses.
 
-## ⚙️ Como executar
+## ⚙️ How to run
 
-### Pré-requisitos
+### Prerequisites
 
-- Python 3.x instalado
-- pip (gerenciador de pacotes Python)
+- Python 3.x installed
+- pip (Python package manager)
 
-### Instalação
+### Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 ```bash
 git clone https://github.com/luisaferreirass/mvc_rocket_pets.git
 cd mvc_rocket_pets
 ```
 
-2. Crie um ambiente virtual (recomendado):
+2. Create a virtual environment (recommended):
 ```bash
 python -m venv venv
 ```
 
-3. Ative o ambiente virtual:
+3. Activate the virtual environment:
 ```bash
 # Windows
 venv\Scripts\activate
@@ -59,74 +59,74 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-4. Instale as dependências:
+4. Install the dependencies:
 ```bash
 pip install flask flask-sqlalchemy
 ```
 
-### Executando a aplicação
+### Running the application
 ```bash
 python run.py
 ```
 
-A API estará disponível em: `http://localhost:5000`
+The API will be available at: `http://localhost:5000`
 
-## 🎯 Funcionalidades
+## 🎯 Features
 
-- ✅ **Cadastrar** novos pets
-- 📖 **Listar** todos os pets cadastrados
-- ✏️ **Editar** informações dos pets
-- 🗑️ **Excluir** pets do sistema
-- 🔍 **Visualizar** detalhes de cada pet
+- ✅ **Register** new pets
+- 📖 **List** all registered pets
+- ✏️ **Edit** pet information
+- 🗑️ **Delete** pets from the system
+- 🔍 **View** details of each pet
 
-## 🛠️ Modelo de dados
+## 🛠️ Data model
 
 ### Pet
 
-| Campo | Tipo | Descrição |
+| Field | Type | Description |
 |-------|------|-----------|
-| id | Integer | Chave primária (auto-incremento) |
-| name | String | Nome do pet |
-| species | String | Espécie do animal |
-| age | Integer | Idade do pet |
-| owner | String | Nome do proprietário |
+| id | Integer | Primary key (auto-increment) |
+| name | String | Pet name |
+| species | String | Animal species |
+| age | Integer | Pet age |
+| owner | String | Owner name |
 
-## 📸 Endpoints da API
+## 📸 API Endpoints
 
-| Método | Endpoint | Descrição |
+| Method | Endpoint | Description |
 |--------|----------|-----------|
-| GET | `/pets` | Lista todos os pets |
-| GET | `/pets/<id>` | Visualiza detalhes do pet |
-| POST | `/pets` | Cadastra um novo pet |
-| PUT | `/pets/<id>` | Atualiza informações do pet |
-| DELETE | `/pets/<id>` | Exclui um pet |
+| GET | `/pets` | Lists all pets |
+| GET | `/pets/<id>` | Shows pet details |
+| POST | `/pets` | Registers a new pet |
+| PUT | `/pets/<id>` | Updates pet information |
+| DELETE | `/pets/<id>` | Deletes a pet |
 
-## 🎨 Padrão MVC no projeto
+## 🎨 MVC Pattern in the project
 ```
-Requisição HTTP
+HTTP Request
       ↓
-  Controller (processa a requisição)
+  Controller (handles the request)
       ↓
-   Model (acessa/manipula dados)
+   Model (accesses/manipulates data)
       ↓
-   View (retorna JSON)
+   View (returns JSON)
       ↓
-  Resposta HTTP (JSON)
-```
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-
-## 👩‍💻 Autora
-
-Desenvolvido por [Luisa Ferreira](https://github.com/luisaferreirass)
+  HTTP Response (JSON)
 ```
 
-**About atualizado:**
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 👩‍💻 Author
+
+Developed by [Luisa Ferreira](https://github.com/luisaferreirass)
 ```
-API de gerenciamento de pets desenvolvida com Flask seguindo o padrão MVC. Implementa CRUD completo com arquitetura organizada em camadas (Model-View-Controller) e persistência de dados em SQLite.
+
+**Updated About:**
+```
+Pet management API built with Flask following the MVC pattern. Implements full CRUD with a layered (Model-View-Controller) architecture and data persistence in SQLite.
